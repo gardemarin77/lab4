@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GGR472 Lab 4</title>
+
+    <!-- Mapbox GL JS — the library that renders the map -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v3.10.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v3.10.0/mapbox-gl.css' rel='stylesheet' />
+
+    <!-- Turf.js — the library that does the GIS analysis (bbox, hexgrid, collect) -->
+    <script src='https://unpkg.com/@turf/turf@7.2.0/turf.min.js'></script>
+
+    <!-- Our custom CSS file for layout and styling -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- The map renders inside this div — Mapbox targets it using id="map" -->
+    <div id="map"></div>
+
+    <!-- Title panel — positioned top-left by CSS -->
+    <div id="title">
+        <h2>Toronto Traffic Collisions</h2>
+        <p>Pedestrian &amp; cyclist collisions, 2006–2021</p>
+    </div>
+
+    <!-- Legend panel — positioned bottom-left by CSS -->
+    <div id="legend">
+
+        <!-- Legend heading -->
+        <h3>Collisions per hexagon</h3>
+
+        <!-- One row per colour stop, matching the interpolate expression in script.js -->
+        <div><span class="box" style="background:#ffffb2"></span> Low</div>
+        <div><span class="box" style="background:#fd8d3c"></span></div>
+        <div><span class="box" style="background:#f03b20"></span></div>
+        <div><span class="box" style="background:#bd0026"></span> High</div>
+
+        <!-- Divider line between legend and toggle -->
+        <hr>
+
+        <!-- Checkbox to toggle the collision points layer on/off -->
+        <!-- The id="toggle-points" is what script.js listens for -->
+        <label>
+            <input type="checkbox" id="toggle-points" checked>
+            Show collision points
+        </label>
+
+    </div>
+
+    <!-- Our JavaScript file — loaded last so the HTML above is ready when it runs -->
+    <script src="script.js"></script>
+</body>
+</html>

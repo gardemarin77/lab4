@@ -1,0 +1,82 @@
+
+
+/* --- Map container ---*/
+#map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* --- Title panel ---*/
+#title {
+    position: absolute;
+    top: 15px;     
+    left: 15px;     
+    background: white;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    z-index: 1;
+}
+
+
+#title h2 {
+    margin: 0 0 4px 0;
+    font-size: 15px;
+}
+
+
+#title p {
+    margin: 0;
+    font-size: 12px;
+    color: #666;     
+}
+
+
+/* --- Legend panel --- */
+#legend {
+    position: absolute;
+    bottom: 30px;    
+    left: 15px;      
+    background: white;
+    padding: 12px 14px;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    z-index: 1;
+}
+
+/* Legend heading */
+#legend h3 {
+    margin: 0 0 8px 0;
+    font-size: 13px;
+}
+
+
+#legend div {
+    display: flex;        
+    align-items: center;  
+    gap: 6px;             
+    margin-bottom: 4px;
+}
+
+
+/* Checkbox + label row */
+#legend label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;   
+    font-size: 12px;
+}
+
+
+.box {
+    display: inline-block;
+    width: 18px;
+    height: 12px;
+    border-radius: 2px;
+}
